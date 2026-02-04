@@ -124,5 +124,35 @@ if ( chislo == 100){
 
 
 
+let box = document.querySelectorAll('.click');
+let isBlue = true;
+
+box.forEach(function(click) {
+    click.addEventListener('click', function() {
+        if (isBlue) {
+            this.style.backgroundColor = 'red';
+            this.style.margin = '2vw';
+            isBlue = false;
+        } else {
+            this.style.backgroundColor = 'lightsteelblue';
+            this.style.margin = '1vw';
+            isBlue = true;
+        }
+        console.log('Стили изменены!');
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
