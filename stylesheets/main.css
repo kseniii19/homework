@@ -6,10 +6,26 @@
     cursor: pointer;
     font-size: 16px;
     margin: 1vw;
-    transition: all 0.3s ease; /* Плавная анимация для backgroundColor и margin */
 }
 
 .click:hover {
     transform: scale(1.05);
+}
 
+.but{
+   background-color: rgb(221, 4, 141);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 1vw;
+}
+
+.point{
+    margin-left: 2vw;
+}
+
+.click2{
+    margin-left: 15vw;
 }

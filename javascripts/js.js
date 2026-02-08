@@ -31,6 +31,8 @@ if (age >= 18) {
 
 */
 
+
+
 let age1 = parseInt(prompt("Введите ваш возраст:"));
 if (age1 >= 65) {
     alert("Поздравляем с пенсионным возрастом!")
@@ -38,8 +40,6 @@ if (age1 >= 65) {
 else {
      alert("Вам еще рано на пенсию")
 }
-
-
 
 
 
@@ -54,8 +54,6 @@ if (n2 > n1){
 if (n1 === n2){
     alert ("Числа равны")
 }
-
-
 
 
 
@@ -119,7 +117,7 @@ if ( chislo == 100){
 
 
 
-
+////////////////////////////////////////////////
 
 
 
@@ -142,8 +140,89 @@ box.forEach(function(click) {
     });
 });
 
+//////////////////////////////////////////////
+
+let o = 0;
+
+    let but = document.querySelector(".but");
+    let point = document.querySelector(".point");
+
+    but.addEventListener ("click", function(){
+        if(o < 16){
+            o++;
+            point.textContent = o;
+        }
+
+        if(o >= 16){
+            o--;
+            point.textContent = o;
+        }
+    })
 
 
+    let timer_value = 10;
+    let timer_interval = null;
+
+    let timer_button_on = document.querySelector(".timer_button_on");
+    let timer_button_off = document.querySelector(".timer_button_off");
+    let timer_span = document.querySelector(".timer_span");
+
+    timer_button_on.addEventListener ("click", function(){
+        
+        timer_value = 10;
+        timer_span.textContent = timer_value;
+
+        timer_interval = setInterval(function(){
+            timer_value--;
+            timer_span.textContent = timer_value;
+            if (timer_value === 0){
+                clearInterval(timer_interval)
+                alert("Время вышло!")
+            }
+        },1000)
+
+    })
+
+    timer_button_off.addEventListener ("click", function(){
+         clearInterval(timer_interval)       
+    })
+
+
+    let timer_value2 = 0;
+    let timer_interval2 = null;
+
+    let timer_button_on2 = document.querySelector(".timer_button_on2");
+    let timer_button_off2 = document.querySelector(".timer_button_off2");
+    let timer_button_sbros = document.querySelector(".timer_button_sbros");
+    let timer_span2 = document.querySelector (".timer_span2");
+
+    
+    timer_button_on2.addEventListener ("click", function(){
+
+        if (timer_interval2 === null){
+            timer_interval2 = setInterval(function(){
+                timer_value2++;
+                timer_span2.textContent = timer_value2;
+            },1000)
+        }
+    })
+
+    timer_button_off2.addEventListener ("click", function(){
+        clearInterval(timer_interval2)
+        timer_interval2 = null;
+    })
+
+    timer_button_sbros.addEventListener ("click", function(){
+        timer_value2 = 0;
+        timer_span2.textContent = timer_value2;
+
+    })
+
+
+
+
+
+    
 
 
 
