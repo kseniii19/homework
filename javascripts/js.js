@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-/*
+
 
 alert('Привет!');
 
@@ -29,7 +29,6 @@ if (age >= 18) {
     console.log("Несовершеннолетний");
 }
 
-*/
 
 
 
