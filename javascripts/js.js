@@ -114,10 +114,17 @@ if ( chislo == 100){
     alert ("Точно 100!")
 }
 
+/////////////////////////////////////////////////
 
+const coordsElement = document.getElementById('coordinats');
+
+document.addEventListener('mousemove', (event) => {
+const x = event.clientX;
+const y = event.clientY;
+coordsElement.textContent = `X: ${x}, Y: ${y}`;
+});
 
 ////////////////////////////////////////////////
-
 
 
 
