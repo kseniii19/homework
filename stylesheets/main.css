@@ -29,3 +29,42 @@
 .click2{
     margin-left: 15vw;
 }
+
+
+
+
+.container{
+    background: rgb(228, 228, 150);
+    padding: 4vw;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgb(rgb(163, 74, 74), rgb(76, 153, 76), rgb(67, 67, 146));
+}
+
+.drag-area{
+    width: 80vw;
+    height: 40vw;
+    background: rgb(40, 40, 237);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.draggable{
+    width: 4vw;
+    height: 4vw;
+    background-color: chartreuse;
+    border-radius: 4px;
+    position: absolute;
+    cursor: grab;
+    transition: box-shadow 0.2s;
+    display: flex;
+    color:azure;
+    user-select: none;
+    font-weight: 900;
+}
+
+
+.draggable:active{
+    cursor: grabbing;
+    box-shadow: 0 15px 30px rgb(163, 74, 74);
+}

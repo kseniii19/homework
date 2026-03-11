@@ -2,129 +2,129 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-alert('Привет!');
+// alert('Привет!');
 
-let str = 'abcde';
-alert(str)
+// let str = 'abcde';
+// alert(str)
 
-alert(str);
+// alert(str);
 
-alert(str[0]); 
+// alert(str[0]); 
 
-alert(str[1]); 
+// alert(str[1]); 
 
-alert(str[4]);
-
-
-
-let a = parseInt(prompt("Введите первое число: -1"));
-let b = parseInt(prompt("Введите первое число: 5"));
-console.log(a > 0 || b > 0); 
-
-
-let age = parseInt(prompt("Введите ваш возраст:"));
-if (age >= 18) {
-    console.log("Совершеннолетний");
-} else {
-    console.log("Несовершеннолетний");
-}
+// alert(str[4]);
 
 
 
-
-let age1 = parseInt(prompt("Введите ваш возраст:"));
-if (age1 >= 65) {
-    alert("Поздравляем с пенсионным возрастом!")
-} 
-else {
-     alert("Вам еще рано на пенсию")
-}
+// let a = parseInt(prompt("Введите первое число: -1"));
+// let b = parseInt(prompt("Введите первое число: 5"));
+// console.log(a > 0 || b > 0); 
 
 
-
-let n1 = parseInt(prompt("Введите первое число"));
-let n2 = parseInt(prompt("Введите второе число "));
-if (n1 > n2){
-    alert ("Первое число больше");
-}
-if (n2 > n1){
-    alert ("Второе число больше");
-}
-if (n1 === n2){
-    alert ("Числа равны")
-}
+// let age = parseInt(prompt("Введите ваш возраст:"));
+// if (age >= 18) {
+//     console.log("Совершеннолетний");
+// } else {
+//     console.log("Несовершеннолетний");
+// }
 
 
 
 
-let f = parseInt(prompt("Введите число"));
-if ((f % 2) == 0){
-    alert ("Это четное число");
-}
-if ((f % 2) !== 0){
-    alert ("Это нечетное число");
-}
+// let age1 = parseInt(prompt("Введите ваш возраст:"));
+// if (age1 >= 65) {
+//     alert("Поздравляем с пенсионным возрастом!")
+// } 
+// else {
+//      alert("Вам еще рано на пенсию")
+// }
+
+
+
+// let n1 = parseInt(prompt("Введите первое число"));
+// let n2 = parseInt(prompt("Введите второе число "));
+// if (n1 > n2){
+//     alert ("Первое число больше");
+// }
+// if (n2 > n1){
+//     alert ("Второе число больше");
+// }
+// if (n1 === n2){
+//     alert ("Числа равны")
+// }
 
 
 
 
-let secret = 7;
-let guess = prompt("Угадайте число от 1 до 10:");
-
-if (guess == secret) {
-    alert ("Вы угадали!");
-} else {
-    alert ("Попробуйте ещё раз!");
-}
-
+// let f = parseInt(prompt("Введите число"));
+// if ((f % 2) == 0){
+//     alert ("Это четное число");
+// }
+// if ((f % 2) !== 0){
+//     alert ("Это нечетное число");
+// }
 
 
 
 
-let login = prompt("Введите логин");
-let parol = prompt ('Введите пароль');
+// let secret = 7;
+// let guess = prompt("Угадайте число от 1 до 10:");
 
-if (login == "admin" && parol == "12345"){
-    alert ("Добро пожаловать!")
-}
-else {
-    alert ("Попробуйте снова!")
-}
-
-
-
-let year = parseInt(prompt("Введите год"));
-if ((year % 4) == 0){
-    alert ("Это високосный год");
-}
-if ((year % 4) !== 0){
-    alert ("Это не високосный год");
-}
+// if (guess == secret) {
+//     alert ("Вы угадали!");
+// } else {
+//     alert ("Попробуйте ещё раз!");
+// }
 
 
 
-let chislo = parseInt (prompt ("Введите число"));
-if (chislo > 100){
-    alert ("Большое число!")
-}
-if (chislo < 100){
-    alert ("Маленькое число!")
-}
-if ( chislo == 100){
-    alert ("Точно 100!")
-}
 
-/////////////////////////////////////////////////
 
-const coordsElement = document.getElementById('coordinats');
+// let login = prompt("Введите логин");
+// let parol = prompt ('Введите пароль');
 
-document.addEventListener('mousemove', (event) => {
-const x = event.clientX;
-const y = event.clientY;
-coordsElement.textContent = `X: ${x}, Y: ${y}`;
-});
+// if (login == "admin" && parol == "12345"){
+//     alert ("Добро пожаловать!")
+// }
+// else {
+//     alert ("Попробуйте снова!")
+// }
 
-////////////////////////////////////////////////
+
+
+// let year = parseInt(prompt("Введите год"));
+// if ((year % 4) == 0){
+//     alert ("Это високосный год");
+// }
+// if ((year % 4) !== 0){
+//     alert ("Это не високосный год");
+// }
+
+
+
+// let chislo = parseInt (prompt ("Введите число"));
+// if (chislo > 100){
+//     alert ("Большое число!")
+// }
+// if (chislo < 100){
+//     alert ("Маленькое число!")
+// }
+// if ( chislo == 100){
+//     alert ("Точно 100!")
+// }
+
+// /////////////////////////////////////////////////
+
+// const coordsElement = document.getElementById('coordinats');
+
+// document.addEventListener('mousemove', (event) => {
+// const x = event.clientX;
+// const y = event.clientY;
+// coordsElement.textContent = `X: ${x}, Y: ${y}`;
+// });
+
+// ////////////////////////////////////////////////
 
 
 
@@ -224,19 +224,73 @@ let o = 0;
 
     })
 
+    /////////////////////////////////////////////////////
 
 
+    let isDragging = false;
+let draggable = document.querySelector(".draggable");
+let dragArea = document.querySelector(".drag-area");
 
+let startX, startY;
+let startLeft, startTop;
 
+draggable.addEventListener("mousedown", startDrag);
+
+function startDrag(e) {
+    isDragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+
+    // Запоминаем начальную позицию самого элемента
+    startLeft = draggable.offsetLeft;
+    startTop = draggable.offsetTop;
+
+    draggable.style.cursor = "grabbing"; // Исправлено с drabbing
+    draggable.style.opacity = '0.9';
+
+    document.addEventListener("mousemove", onDrag);
+    document.addEventListener("mouseup", stopDrag);
+}
+
+function onDrag(e) {
+    // ОШИБКА БЫЛА ТУТ: меняем на !isDragging
+    // Если мы НЕ тянем, то выходим из функции
+    if (!isDragging) return; 
+
+    let dx = e.clientX - startX;
+    let dy = e.clientY - startY;
+
+    let newLeft = startLeft + dx;
+    let newTop = startTop + dy;
+
+    // Ограничение области
+    let maxLeft = dragArea.clientWidth - draggable.offsetWidth;
+    let maxTop = dragArea.clientHeight - draggable.offsetHeight;
+
+    newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+    newTop = Math.max(0, Math.min(newTop, maxTop));
+
+    draggable.style.left = newLeft + "px";
+    draggable.style.top = newTop + "px";
+}
+
+function stopDrag() {
+    // ОШИБКА БЫЛА ТУТ: меняем на !isDragging
+    if (!isDragging) return;
     
+    isDragging = false;
 
+    draggable.style.cursor = "grab";
+    draggable.style.opacity = "1";
 
+    // Обязательно удаляем слушатели, чтобы не тратить ресурсы
+    document.removeEventListener("mousemove", onDrag);
+    document.removeEventListener("mouseup", stopDrag);
+}
 
-
-
-
-
-
+draggable.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+});
 
 
 });
